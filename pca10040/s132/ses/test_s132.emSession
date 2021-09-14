@@ -1,0 +1,154 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="232" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../components/ble/common/ble_conn_params.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1004" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1070" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1261" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1482" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="492" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1824" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/inspection.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="164" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/mode_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="339" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/mqtt_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="138" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/orange_service.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="662" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/orange_service.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="273" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/orange_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="389" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/orange_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="200" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/ble/peer_manager/peer_manager_handler.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="624" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/ble/peer_manager/peer_manager_handler.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="204" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/smartlock_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="302" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/smartlock_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="306" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/smartlock_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="233" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/w25q80dv_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="512" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/w25q80dv_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="542" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/w25q80dv_ctrl.c" useHWbreakpoint="false"/>
+  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="smartlock3rd01_s132" radix="16" sizeText="" addressText="0x20006648"/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="test_s132" radix="16" sizeText="" addressText="0x200041e6"/>
+ </Memory1>
+ <Memory2>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="smartlock3rd01_s132" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="test_s132" radix="16" sizeText="" addressText=""/>
+ </Memory2>
+ <Memory3>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="smartlock3rd01_s132" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="test_s132" radix="16" sizeText="" addressText=""/>
+ </Memory3>
+ <Memory4>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="smartlock3rd01_s132" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="test_s132" radix="16" sizeText="" addressText=""/>
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="test_s132"/>
+  <ProjectSessionItem path="test_s132;test_s132"/>
+  <ProjectSessionItem path="test_s132;test_s132;Application"/>
+  <ProjectSessionItem path="test_s132;test_s132;Application;app"/>
+  <ProjectSessionItem path="test_s132;test_s132;Application;app;common"/>
+  <ProjectSessionItem path="test_s132;test_s132;Application;app;sensors"/>
+  <ProjectSessionItem path="test_s132;test_s132;Application;modules"/>
+  <ProjectSessionItem path="test_s132;test_s132;nRF_BLE"/>
+  <ProjectSessionItem path="test_s132;test_s132;nRF_BLE_Services"/>
+  <ProjectSessionItem path="test_s132;test_s132;nRF_Libraries"/>
+  <ProjectSessionItem path="test_s132;test_s132;nRF_SoftDevice"/>
+ </Project>
+ <Register1>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="smartlock3rd01_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="test_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register1>
+ <Register2>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="smartlock3rd01_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="test_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register2>
+ <Register3>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="smartlock3rd01_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="test_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register3>
+ <Register4>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="smartlock3rd01_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="test_s132" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register4>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Each Second">
+   <Watchpoint expression="ec_power_flag" name="ec_power_flag" radix="16" linenumber="92" filename="../../../src/ram.c"/>
+   <Watchpoint expression="publish_check" name="publish_check" radix="16" linenumber="95" filename="../../../src/ram.c"/>
+   <Watchpoint expression="subscribe_check" name="subscribe_check" radix="1" linenumber="95" filename="../../../src/ram.c"/>
+   <Watchpoint expression="mode_status" name="mode_status" radix="16" linenumber="43" filename="../../../src/mode_ctrl.c"/>
+   <Watchpoint expression="gps_check" name="gps_check" radix="-1" linenumber="95" filename="../../../src/ram.c"/>
+   <Watchpoint expression="sys_timer_count" name="sys_timer_count" radix="-1" linenumber="126" filename="../../../src/timer.c"/>
+   <Watchpoint expression="neglect_check_flag" name="neglect_check_flag" radix="-1" linenumber="45" filename="../../../src/mode_ctrl.c"/>
+   <Watchpoint expression="acce_threshold_count" name="acce_threshold_count" radix="16" linenumber="21" filename="../../../src/mode_ctrl.c"/>
+   <Watchpoint expression="receive_data" name="receive_data" radix="1" linenumber="1427" filename="../../../src/ec_ctrl.c"/>
+   <Watchpoint expression="json_root_object" name="json_root_object" radix="16" linenumber="59" filename="../../../src/json_ctrl.c"/>
+   <Watchpoint expression="ec_protcol_num" name="ec_protcol_num" radix="-1" linenumber="212" filename="../../../src/ec_ctrl.c"/>
+   <Watchpoint expression="ec_process_result" name="ec_process_result" radix="16" linenumber="2222" filename="../../../src/ec_ctrl.c"/>
+   <Watchpoint expression="ec25_status" name="ec25_status" radix="16" linenumber="94" filename="../../../src/ram.c"/>
+   <Watchpoint expression="protocol_sequence" name="protocol_sequence" radix="-1" linenumber="53" filename="../../../src/ec_seq_ctrl.c"/>
+   <Watchpoint expression="uart_on_flag" name="uart_on_flag" radix="-1" linenumber="2228" filename="../../../src/ec_ctrl.c"/>
+   <Watchpoint expression="ec25_inspection_retry" name="ec25_inspection_retry" radix="16" linenumber="394" filename="../../../src/inspection.c"/>
+   <Watchpoint expression="p_ble_evt" name="p_ble_evt" radix="-1" linenumber="299" filename="../../../src/smartlock_service_c.c"/>
+   <Watchpoint expression="sys_timer_flag" name="sys_timer_flag" radix="-1" linenumber="1660" filename="../../../src/test.c"/>
+   <Watchpoint expression="open_flag" name="open_flag" radix="16" linenumber="1648" filename="../../../src/test.c"/>
+   <Watchpoint expression="sys_timer_limit" name="sys_timer_limit" radix="-1" linenumber="1650" filename="../../../src/test.c"/>
+   <Watchpoint expression="test_step" name="test_step" radix="-1" linenumber="1632" filename="../../../src/test.c"/>
+   <Watchpoint expression="flash_check" name="flash_check" radix="-1" linenumber="598" filename="../../../src/w25q80dv_ctrl.c"/>
+   <Watchpoint expression="mqtt_count" name="mqtt_count" radix="11" linenumber="9297" filename="../../../src/test.c"/>
+   <Watchpoint expression="open_count" name="open_count" radix="11" linenumber="121" filename="../../../src/ram.c"/>
+   <Watchpoint expression="master_tbl" name="master_tbl" radix="-1" linenumber="76" filename="../../../src/motor_ctrl.h"/>
+   <Watchpoint expression="p_context" name="p_context" radix="-1" linenumber="264" filename="../../../src/smartlock_service_c.c"/>
+   <Watchpoint expression="p_ble_smartlock_c" name="p_ble_smartlock_c" radix="-1" linenumber="264" filename="../../../src/smartlock_service_c.c"/>
+   <Watchpoint expression="p_scan_evt" name="p_scan_evt" radix="-1" linenumber="794" filename="../../../src/ble_ctrl.c"/>
+   <Watchpoint expression="params" name="params" radix="-1" linenumber="486" filename="../../../src/orange_service.c"/>
+   <Watchpoint expression="data" name="data" radix="16" linenumber="485" filename="../../../src/orange_service.c"/>
+   <Watchpoint expression="write_buf" name="write_buf" radix="-1" linenumber="96" filename="../../../src/orange_service.c"/>
+   <Watchpoint expression="write_flag" name="write_flag" radix="-1" linenumber="659" filename="../../../src/orange_service.c"/>
+   <Watchpoint expression="received_write_data_len" name="received_write_data_len" radix="-1" linenumber="662" filename="../../../src/orange_service.c"/>
+   <Watchpoint numelements="20" expression="notification_buf" evalMode="2" name="notification_buf" radix="16" linenumber="21" filename="../../../src/ram.c" list=""/>
+   <Watchpoint expression="send_data" name="send_data" radix="-1" linenumber="1249" filename="../../../src/ble_ctrl.c"/>
+   <Watchpoint expression="orange_c_ble_connect_flag" name="orange_c_ble_connect_flag" radix="-1" linenumber="39" filename="../../../src/ram.c"/>
+   <Watchpoint expression="write_req" name="write_req" radix="-1" linenumber="410" filename="../../../src/orange_service_c.c"/>
+   <Watchpoint expression="ble_connect_flag" name="ble_connect_flag" radix="-1" linenumber="38" filename="../../../src/ram.c"/>
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="15" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/main.c" selected="1" top="5" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="359" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.c" selected="0" top="358" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="256" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.h" selected="0" top="243" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="661" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service.c" selected="0" top="644" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="138" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service.h" selected="0" top="124" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="11" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ble_ctrl.h" selected="0" top="0" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="550" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ble_ctrl.c" selected="0" top="539" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="126" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/timer.c" selected="0" top="117" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="4" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/define.h" selected="0" top="0" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="37" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ram.c" selected="0" top="16" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="37" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ram.h" selected="0" top="23" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="308" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="268" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="357" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh.c" selected="0" top="332" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="231" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/common/ble_conn_params.c" selected="0" top="208" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="616" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/peer_manager/peer_manager_handler.c" selected="0" top="609" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="87" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="72" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error.c" selected="0" top="60" codecName="UTF-8"/>
+ </Files>
+ <ARMCrossStudioWindow activeProject="test_s132" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/BLE/main_SDK/smartlock3rd00/smartlock3rd/ble_central_and_peripheral/test_project/src" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>

@@ -1,0 +1,10 @@
+/hex
+/pca10056/s140/ses/Output
+/pca10056/s140/ses/smartlock3rd00.emSession
+/pca10056/s140/ses/smartlock3rd00_Release.jlink
+/pca10040/s132/ses/Output
+/pca10040/s132/ses/smartlock3rd01_s132.emSession
+/pca10040/s132/ses/smartlock3rd01_s132_Release.jlink
+/secure_bootloader/pca10040_s132_ble/ses/Output
+/secure_bootloader/pca10040_s132_ble/ses/secure_bootloader_ble_s132_pca10040.emSession
+/pca10040/s132/ses/smartlock3rd01_s132_Debug.jlink
