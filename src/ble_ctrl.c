@@ -579,7 +579,7 @@ static void advertising_stop(void)
 static void pm_evt_handler(pm_evt_t const * p_evt)
 {
     pm_handler_on_pm_evt(p_evt);
-    pm_handler_disconnect_on_sec_failure(p_evt);
+    //pm_handler_disconnect_on_sec_failure(p_evt);
     pm_handler_flash_clean(p_evt);
 
     switch (p_evt->evt_id)
@@ -1110,15 +1110,12 @@ static void orange_c_evt_handler(ble_orange_c_t * p_orange_c, ble_orange_c_evt_t
                                                     &p_orange_c_evt->params.peer_db);
                 APP_ERROR_CHECK(err_code);
 
-#if defined(BUG_AND_TEMPORARY_STOP)
-#else
                 // Initiate bonding.
                 err_code = pm_conn_secure(m_conn_handle_orange_c , false);
                 if (err_code != NRF_ERROR_BUSY)
                 {
                     APP_ERROR_CHECK(err_code);
                 }
-#endif
 
                 // Orange service discovered. Enable notification.
                 err_code = ble_orange_c_orange_notification_enable(p_orange_c);
@@ -1209,10 +1206,7 @@ void ble_init(void)
     gatt_init();
     conn_params_init();
     db_discovery_init();
-#if defined(BUG_AND_TEMPORARY_STOP)
-#else
     peer_manager_init();
-#endif
     orange_c_init();
     services_init();
     advertising_init();
