@@ -115,7 +115,7 @@
    <Watchpoint expression="write_buf" name="write_buf" radix="-1" linenumber="96" filename="../../../src/orange_service.c"/>
    <Watchpoint expression="write_flag" name="write_flag" radix="-1" linenumber="659" filename="../../../src/orange_service.c"/>
    <Watchpoint expression="received_write_data_len" name="received_write_data_len" radix="-1" linenumber="662" filename="../../../src/orange_service.c"/>
-   <Watchpoint numelements="20" expression="notification_buf" evalMode="2" name="notification_buf" radix="16" linenumber="21" filename="../../../src/ram.c" list=""/>
+   <Watchpoint expression="notification_buf" name="notification_buf" radix="16" linenumber="21" filename="../../../src/ram.c"/>
    <Watchpoint expression="send_data" name="send_data" radix="-1" linenumber="1249" filename="../../../src/ble_ctrl.c"/>
    <Watchpoint expression="orange_c_ble_connect_flag" name="orange_c_ble_connect_flag" radix="-1" linenumber="39" filename="../../../src/ram.c"/>
    <Watchpoint expression="write_req" name="write_req" radix="-1" linenumber="410" filename="../../../src/orange_service_c.c"/>
@@ -132,7 +132,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="15" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/main.c" selected="1" top="5" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="17" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/main.c" selected="1" top="7" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="359" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.c" selected="0" top="358" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="256" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.h" selected="0" top="243" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="661" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service.c" selected="0" top="644" codecName="UTF-8"/>
@@ -150,5 +150,5 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="87" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="72" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error.c" selected="0" top="60" codecName="UTF-8"/>
  </Files>
- <ARMCrossStudioWindow activeProject="test_s132" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/BLE/main_SDK/smartlock3rd00/smartlock3rd/ble_central_and_peripheral/test_project/src" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <ARMCrossStudioWindow activeProject="test_s132" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/BLE/main_SDK/smartlock3rd00/smartlock3rd/ble_central_and_peripheral/test_project/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
