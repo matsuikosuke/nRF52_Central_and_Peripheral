@@ -547,7 +547,11 @@ static void adv_scan_start(void)
     {
         // Start scanning for peripherals and initiate connection to devices which
         // advertise Heart Rate or Running speed and cadence UUIDs.
-        scan_start();
+#if defined(WITHOUT_SCAN)
+#else
+    // Initialize the async SVCI interface to bootloader before any interrupts are enabled.
+    scan_start();
+#endif        
 
         // Start advertising.
         err_code = ble_advertising_start(&m_advertising, BLE_ADV_MODE_FAST);
@@ -1010,14 +1014,7 @@ static void on_ble_central_evt(ble_evt_t const * p_ble_evt)
 
                 m_conn_handle_orange_c = BLE_CONN_HANDLE_INVALID;
                 
-                filter_settings_change();
-//                err_code = nrf_ble_scan_all_filter_remove(&m_scan);
-//                APP_ERROR_CHECK(err_code);
-//
-//                err_code = nrf_ble_scan_filter_set(&m_scan, 
-//                                                   SCAN_UUID_FILTER, 
-//                                                   &m_adv_uuids[ORANGE_SERVICE_UUID_IDX]);
-//                APP_ERROR_CHECK(err_code);
+//                filter_settings_change();
             }
 
             if (m_conn_handle_orange_c == BLE_CONN_HANDLE_INVALID)
@@ -1141,12 +1138,16 @@ static void orange_c_evt_handler(ble_orange_c_t * p_orange_c, ble_orange_c_evt_t
                                                     &p_orange_c_evt->params.peer_db);
                 APP_ERROR_CHECK(err_code);
 
+#if defined(BUG_AND_TEMPORARY_STOP)
+#else
                 // Initiate bonding.
                 err_code = pm_conn_secure(m_conn_handle_orange_c , false);
                 if (err_code != NRF_ERROR_BUSY)
                 {
                     APP_ERROR_CHECK(err_code);
                 }
+#endif
+
 
                 // Orange service discovered. Enable notification.
                 err_code = ble_orange_c_orange_notification_enable(p_orange_c);
@@ -1264,6 +1265,7 @@ void central_write_notification_test(void)
     if(true == sys_timer_limit[BLE_TEST_TIMER] && true == orange_c_ble_connect_flag)
     {
         sys_timer_limit[BLE_TEST_TIMER] = false;
+        write_res = false;
 
         for(int i=0; i<10; i++)
         {

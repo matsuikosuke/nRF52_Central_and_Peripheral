@@ -12,6 +12,7 @@
 extern uint8_t received_write_data_len;
 extern uint8_t write_buf[BLE_WRITE_DATA_LENGTH];
 extern bool write_flag;
+extern bool write_res;
 extern uint8_t reassembly_write_buf[BLE_ALL_DATA_MAX];
 extern uint32_t received_packet_num;
 extern uint16_t next_reassembly_write_index;

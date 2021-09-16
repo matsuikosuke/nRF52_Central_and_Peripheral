@@ -32,7 +32,7 @@ int main(void)
     {
         //Test
         central_write_notification_test();
-//        peripheral_write_notification_test();
+        peripheral_write_notification_test();
 //        peripheral_notification_test();
 
         WDT_RESTART();

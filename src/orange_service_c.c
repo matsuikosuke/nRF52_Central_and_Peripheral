@@ -288,6 +288,7 @@ void ble_orange_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
 
         case BLE_GATTC_EVT_WRITE_RSP:
             on_write_rsp(p_ble_orange_c, p_ble_evt);
+            write_res = true;
             break;
 
         case BLE_GAP_EVT_DISCONNECTED:

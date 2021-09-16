@@ -13,6 +13,7 @@
 uint8_t received_write_data_len;
 uint8_t write_buf[BLE_WRITE_DATA_LENGTH] = { 0 };
 bool write_flag = false;
+bool write_res = false;
 uint8_t reassembly_write_buf[BLE_ALL_DATA_MAX] = { 0 };
 uint32_t received_packet_num;
 uint16_t next_reassembly_write_index;
