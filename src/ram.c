@@ -45,6 +45,9 @@ uint16_t mtu_max_size;
 
 uint8_t read_buf[10] = "0123456789";
 
+uint8_t adv_buf[31] = { 0 };
+uint8_t scan_buf[31] = { 0 };
+
 // ble_orange_t stoptexDoorService;
 
 // motor control variables

@@ -975,6 +975,8 @@ static void on_ble_central_evt(ble_evt_t const * p_ble_evt)
 {
     ret_code_t            err_code;
     ble_gap_evt_t const * p_gap_evt = &p_ble_evt->evt.gap_evt;
+    ble_gap_evt_adv_report_t const * p_adv_report = &p_ble_evt->evt.gap_evt.params.adv_report;
+    
 
     switch (p_ble_evt->header.evt_id)
     {
@@ -1071,6 +1073,35 @@ static void on_ble_central_evt(ble_evt_t const * p_ble_evt)
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             APP_ERROR_CHECK(err_code);
             break;
+            
+        case BLE_GAP_EVT_ADV_REPORT:
+        {
+                uint16_t length;
+                
+                length = p_adv_report->data.len;
+                for (int i=0; i<length; i++)
+                {
+                    if((1 == p_adv_report->type.connectable 
+                        || 1 == p_adv_report->type.directed
+                        || 1 == p_adv_report->type.scannable
+                        || 1 == p_adv_report->type.extended_pdu)
+                        && 0 == p_adv_report->type.scan_response)
+                    {
+                        adv_buf[i] = p_adv_report->data.p_data[i];
+                    }
+                    else if(1 == p_adv_report->type.scan_response)
+                    {
+                        scan_buf[i] = p_adv_report->data.p_data[i];
+                    }
+                }
+                //if ((p_adv_report->dlen == 30 ) && (ble_state == BLE_CONNECTED) &&
+                    //(p_adv_report->data[25] == 0x34) &&
+                    //(p_adv_report->data[26] == 0x12) &&
+                    //(p_adv_report->data[27] == 0x78) &&
+                    //(p_adv_report->data[2] == 0x1a))
+                    //ble_nus_string_send(&m_nus, p_adv_report->data, p_adv_report->dlen);
+        }
+        break;
 
         default:
             // No implementation needed.

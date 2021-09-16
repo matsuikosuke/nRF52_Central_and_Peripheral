@@ -44,6 +44,9 @@ extern uint16_t mtu_max_size;
 
 extern uint8_t read_buf[10];
 
+extern uint8_t adv_buf[31];
+extern uint8_t scan_buf[31];
+
 // motor control variables
 extern uint16_t pwm_width;
 extern bool motor_direction;
