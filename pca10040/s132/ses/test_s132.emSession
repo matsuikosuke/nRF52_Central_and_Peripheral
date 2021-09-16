@@ -5,17 +5,16 @@
   <BreakpointListItem trigger="" line="232" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../components/ble/common/ble_conn_params.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="1004" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="1070" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="1261" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="1482" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1255" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="1476" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="492" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/ble_ctrl.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="1824" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/inspection.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="164" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/mode_ctrl.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="339" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/mqtt_ctrl.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="138" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/orange_service.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="662" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/orange_service.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="273" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../src/orange_service_c.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="389" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/orange_service_c.c" useHWbreakpoint="false"/>
-  <BreakpointListItem trigger="" line="200" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/ble/peer_manager/peer_manager_handler.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="410" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/orange_service_c.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="200" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../components/ble/peer_manager/peer_manager_handler.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="624" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/ble/peer_manager/peer_manager_handler.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="204" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/smartlock_service_c.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="302" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../src/smartlock_service_c.c" useHWbreakpoint="false"/>
@@ -115,10 +114,10 @@
    <Watchpoint expression="write_buf" name="write_buf" radix="-1" linenumber="96" filename="../../../src/orange_service.c"/>
    <Watchpoint expression="write_flag" name="write_flag" radix="-1" linenumber="659" filename="../../../src/orange_service.c"/>
    <Watchpoint expression="received_write_data_len" name="received_write_data_len" radix="-1" linenumber="662" filename="../../../src/orange_service.c"/>
-   <Watchpoint expression="notification_buf" name="notification_buf" radix="16" linenumber="21" filename="../../../src/ram.c"/>
-   <Watchpoint expression="send_data" name="send_data" radix="-1" linenumber="1249" filename="../../../src/ble_ctrl.c"/>
+   <Watchpoint numelements="30" expression="notification_buf" evalMode="2" name="notification_buf" radix="16" linenumber="21" filename="../../../src/ram.c" list=""/>
+   <Watchpoint expression="send_data" name="send_data" radix="-1" linenumber="1243" filename="../../../src/ble_ctrl.c"/>
    <Watchpoint expression="orange_c_ble_connect_flag" name="orange_c_ble_connect_flag" radix="-1" linenumber="39" filename="../../../src/ram.c"/>
-   <Watchpoint expression="write_req" name="write_req" radix="-1" linenumber="410" filename="../../../src/orange_service_c.c"/>
+   <Watchpoint expression="write_req" name="write_req" radix="-1" linenumber="431" filename="../../../src/orange_service_c.c"/>
    <Watchpoint expression="ble_connect_flag" name="ble_connect_flag" radix="-1" linenumber="38" filename="../../../src/ram.c"/>
   </Watches>
  </Watch1>
@@ -132,23 +131,24 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="17" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/main.c" selected="1" top="7" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="359" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.c" selected="0" top="358" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="17" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/main.c" selected="0" top="19" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="284" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.c" selected="1" top="277" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="256" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service_c.h" selected="0" top="243" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="661" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service.c" selected="0" top="644" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="281" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="9" path="../../../src/orange_service.c" selected="0" top="281" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="138" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/orange_service.h" selected="0" top="124" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="11" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ble_ctrl.h" selected="0" top="0" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="550" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ble_ctrl.c" selected="0" top="539" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="1181" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ble_ctrl.c" selected="0" top="1168" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="126" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/timer.c" selected="0" top="117" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="4" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/define.h" selected="0" top="0" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="37" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ram.c" selected="0" top="16" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="22" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ram.c" selected="0" top="3" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="37" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../src/ram.h" selected="0" top="23" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="308" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="268" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="357" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh.c" selected="0" top="332" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="231" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/common/ble_conn_params.c" selected="0" top="208" codecName="UTF-8"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="616" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/peer_manager/peer_manager_handler.c" selected="0" top="609" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="285" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/common/ble_conn_params.c" selected="0" top="282" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="616" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/peer_manager/peer_manager_handler.c" selected="0" top="605" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="87" codecName="UTF-8"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="72" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error.c" selected="0" top="60" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="144" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/ble/common/ble_srv_common.c" selected="0" top="144" codecName="UTF-8"/>
  </Files>
  <ARMCrossStudioWindow activeProject="test_s132" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/BLE/main_SDK/smartlock3rd00/smartlock3rd/ble_central_and_peripheral/test_project/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

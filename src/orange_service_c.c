@@ -75,6 +75,23 @@ static void gatt_error_handler(uint32_t   nrf_error,
 }
 
 
+/**@brief Function for handling write response events.
+ *
+ * @param[in] p_ble_orange_c Pointer to the Orange Client structure.
+ * @param[in] p_ble_evt   Pointer to the BLE event received.
+ */
+static void on_write_rsp(ble_orange_c_t * p_ble_orange_c, ble_evt_t const * p_ble_evt)
+{
+    // Check if the event if on the link for this instance
+    if (p_ble_orange_c->conn_handle != p_ble_evt->evt.gattc_evt.conn_handle)
+    {
+        return;
+    }
+    // Check if there is any message to be sent across to the peer and send it.
+    //tx_buffer_process();
+}
+
+
 /**@brief Function for handling Handle Value Notification received from the SoftDevice.
  *
  * @details This function uses the Handle Value Notification received from the SoftDevice
@@ -267,6 +284,10 @@ void ble_orange_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
     {
         case BLE_GATTC_EVT_HVX:
             on_hvx(p_ble_orange_c, p_ble_evt);
+            break;
+
+        case BLE_GATTC_EVT_WRITE_RSP:
+            on_write_rsp(p_ble_orange_c, p_ble_evt);
             break;
 
         case BLE_GAP_EVT_DISCONNECTED:
