@@ -87,10 +87,41 @@ static void on_write_rsp(ble_orange_c_t * p_ble_orange_c, ble_evt_t const * p_bl
     {
         return;
     }
-    // Check if there is any message to be sent across to the peer and send it.
-    //tx_buffer_process();
 }
 
+
+/*
+
+*/
+static void on_read_rsp(ble_orange_c_t *p_ble_orange_c, ble_evt_t const *p_ble_evt)
+{
+    ble_gattc_evt_read_rsp_t const *p_response = &p_ble_evt->evt.gattc_evt.params.read_rsp;
+    ble_orange_c_evt_t ble_orange_c_evt;
+
+    // Check if the event is on the link for this instance and the event handler is present.
+    if ((p_ble_orange_c->evt_handler == NULL) ||
+        (p_ble_orange_c->conn_handle != p_ble_evt->evt.gattc_evt.conn_handle))
+    {
+        return;
+    }
+
+    if (p_ble_evt->evt.gattc_evt.gatt_status == BLE_GATT_STATUS_SUCCESS)
+    {
+        if (p_response->handle == p_ble_orange_c->peer_orange_db.orange_read_handle)
+        {
+            ble_orange_c_evt.evt_type = BLE_ORANGE_C_EVT_READ;
+            ble_orange_c_evt.conn_handle = p_ble_orange_c->conn_handle;
+            NRF_LOG_INFO("Received read data %lu of length %u", * (uint32_t *) p_response->data, p_response->len);
+
+            for(int i=0; i<p_response->len; i++)
+            {
+                central_read_buf[i] = p_response->data[i];
+            }
+
+            p_ble_orange_c->evt_handler(p_ble_orange_c, &ble_orange_c_evt);
+        }
+    }
+}
 
 /**@brief Function for handling Handle Value Notification received from the SoftDevice.
  *
@@ -182,6 +213,7 @@ static void on_disconnected(ble_orange_c_t * p_ble_orange_c, ble_evt_t const * p
         p_ble_orange_c->peer_orange_db.orange_write_handle         = BLE_GATT_HANDLE_INVALID;
         p_ble_orange_c->peer_orange_db.orange_indicate_cccd_handle = BLE_GATT_HANDLE_INVALID;
         p_ble_orange_c->peer_orange_db.orange_indicate_handle      = BLE_GATT_HANDLE_INVALID;
+        p_ble_orange_c->peer_orange_db.orange_read_handle          = BLE_GATT_HANDLE_INVALID;
     }
 }
 
@@ -215,6 +247,10 @@ void ble_orange_on_db_disc_evt(ble_orange_c_t * p_ble_orange_c, ble_db_discovery
                 case ORANGE_INDICATION_UUID_CHAR:
                     evt.params.peer_db.orange_indicate_handle      = p_char->characteristic.handle_value;
                     evt.params.peer_db.orange_indicate_cccd_handle = p_char->cccd_handle;
+                    break;
+
+                case ORANGE_READ_UUID_CHAR:
+                    evt.params.peer_db.orange_read_handle          = p_char->characteristic.handle_value;
                     break;
 
                 default:
@@ -286,9 +322,13 @@ void ble_orange_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context)
             on_hvx(p_ble_orange_c, p_ble_evt);
             break;
 
+        case BLE_GATTC_EVT_READ_RSP:
+            on_read_rsp(p_ble_orange_c, p_ble_evt);
+            break;
+
         case BLE_GATTC_EVT_WRITE_RSP:
-            on_write_rsp(p_ble_orange_c, p_ble_evt);
             write_res = true;
+            on_write_rsp(p_ble_orange_c, p_ble_evt);
             break;
 
         case BLE_GAP_EVT_DISCONNECTED:
@@ -437,6 +477,28 @@ uint32_t ble_orange_data_write(ble_orange_c_t * p_ble_orange_c, uint8_t* data, u
     return nrf_ble_gq_item_add(p_ble_orange_c->p_gatt_queue, &write_req, p_ble_orange_c->conn_handle);
 }
 
+uint32_t ble_orange_read_request(ble_orange_c_t * p_ble_orange_c)
+{
+    VERIFY_PARAM_NOT_NULL(p_ble_orange_c);
+
+    if (p_ble_orange_c->conn_handle == BLE_CONN_HANDLE_INVALID)
+    {
+        return NRF_ERROR_INVALID_STATE;
+    }
+
+    NRF_LOG_DEBUG("Read orange");
+
+    nrf_ble_gq_req_t read_req;
+
+    memset(&read_req, 0, sizeof(nrf_ble_gq_req_t));
+
+    read_req.type                        = NRF_BLE_GQ_REQ_GATTC_READ;
+    read_req.error_handler.cb            = gatt_error_handler;
+    read_req.error_handler.p_ctx         = p_ble_orange_c;
+    read_req.params.gattc_read.handle   = p_ble_orange_c->peer_orange_db.orange_read_handle;
+
+    return nrf_ble_gq_item_add(p_ble_orange_c->p_gatt_queue, &read_req, p_ble_orange_c->conn_handle);
+}
 
 uint32_t ble_orange_c_handles_assign(ble_orange_c_t    * p_ble_orange_c,
                                   uint16_t         conn_handle,

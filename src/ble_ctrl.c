@@ -1168,6 +1168,10 @@ static void orange_c_evt_handler(ble_orange_c_t * p_orange_c, ble_orange_c_evt_t
         {
         } break; // BLE_ORANGE_C_EVT_INDICATION
 
+        case BLE_ORANGE_C_EVT_READ:
+        {
+        } break; // BLE_ORANGE_C_EVT_READ
+
         default:
             // No implementation needed.
             break;
@@ -1264,7 +1268,7 @@ void central_write_notification_test(void)
 
     if(true == sys_timer_limit[BLE_TEST_TIMER] && true == orange_c_ble_connect_flag)
     {
-        sys_timer_limit[BLE_TEST_TIMER] = false;
+        //sys_timer_limit[BLE_TEST_TIMER] = false;
         write_res = false;
 
         for(int i=0; i<10; i++)
@@ -1276,5 +1280,20 @@ void central_write_notification_test(void)
 //        ble_orange_status_send(&m_orange_c, send_data[0]);
 
         write_test_cyc += 1;
+    }
+}
+
+void central_read_test(void)
+{
+    if(true == sys_timer_limit[BLE_TEST_TIMER] && true == orange_c_ble_connect_flag)
+    {
+        sys_timer_limit[BLE_TEST_TIMER] = false;
+                    
+        for(int i=0; i<10; i++)
+        {
+            central_read_buf[i] = 0;
+        }
+
+        ble_orange_read_request(&m_orange_c);
     }
 }

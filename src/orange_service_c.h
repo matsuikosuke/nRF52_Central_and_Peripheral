@@ -108,7 +108,8 @@ typedef enum
 {
     BLE_ORANGE_C_EVT_DISCOVERY_COMPLETE = 1,  /**< Event indicating that the ORANGE Service was discovered at the peer. */
     BLE_ORANGE_C_EVT_NOTIFICATION,       /**< Event indicating that a notification of the ORANGE characteristic has been received from the peer. */
-    BLE_ORANGE_C_EVT_INDICATION          /**< Event indicating that a notification of the ORANGE characteristic has been received from the peer. */
+    BLE_ORANGE_C_EVT_INDICATION,          /**< Event indicating that a notification of the ORANGE characteristic has been received from the peer. */
+    BLE_ORANGE_C_EVT_READ
 } ble_orange_c_evt_type_t;
 
 /**@brief Structure containing the handles related to the ORANGE Service found on the peer. */
@@ -119,6 +120,7 @@ typedef struct
     uint16_t orange_write_handle;          /**< Handle of the Write characteristic as provided by the SoftDevice. */
     uint16_t orange_indicate_cccd_handle;  /**< Handle of the CCCD of the Indicate characteristic. */
     uint16_t orange_indicate_handle;       /**< Handle of the Indicate characteristic as provided by the SoftDevice. */
+    uint16_t orange_read_handle;
 } orange_db_t;
 
 /**@brief ORANGE Event structure. */
@@ -255,7 +257,7 @@ uint32_t ble_orange_c_handles_assign(ble_orange_c_t *    p_ble_orange_c,
  */
 uint32_t ble_orange_status_send(ble_orange_c_t * p_ble_orange_c, uint8_t status);
 uint32_t ble_orange_data_write(ble_orange_c_t * p_ble_orange_c, uint8_t* data, uint8_t data_len);
-
+uint32_t ble_orange_read_request(ble_orange_c_t * p_ble_orange_c);
 
 #ifdef __cplusplus
 }

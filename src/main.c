@@ -34,6 +34,7 @@ int main(void)
         central_write_notification_test();
         peripheral_write_notification_test();
 //        peripheral_notification_test();
+        central_read_test();
 
         WDT_RESTART();
         idle_state_handle();

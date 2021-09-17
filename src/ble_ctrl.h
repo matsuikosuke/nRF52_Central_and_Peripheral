@@ -54,3 +54,4 @@ void indication_exe(uint8_t * data, uint8_t len);
 void notification_exe(uint8_t * data, uint8_t len);
 void ble_req_disconnect(void);
 void central_write_notification_test(void);
+void central_read_test(void);
