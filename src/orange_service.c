@@ -353,7 +353,7 @@ static uint32_t orange_indication_char_add(ble_orange_t * p_orange, const ble_or
     return sd_ble_gatts_characteristic_add(p_orange->service_handle,                       
     &char_md,
     &attr_char_value,
-    &p_orange->command_res_handles);
+    &p_orange->command_indication_handles);
 }
 
 
@@ -413,7 +413,7 @@ static uint32_t orange_notification_char_add(ble_orange_t * p_orange, const ble_
     return sd_ble_gatts_characteristic_add(p_orange->service_handle,                       
     &char_md,
     &attr_char_value,
-    &p_orange->command_res_handles);
+    &p_orange->command_notification_handles);
 }
 
 
@@ -445,19 +445,19 @@ uint32_t ble_orange_init(ble_orange_t * p_orange, const ble_orange_init_t * p_or
     err_code = sd_ble_gatts_service_add(BLE_GATTS_SRVC_TYPE_PRIMARY, &ble_uuid, &p_orange->service_handle);
     VERIFY_SUCCESS(err_code);
 
-    // Add Lock State characteristic
+    // Add Orange Read characteristic
     err_code = orange_read_char_add(p_orange, p_orange_init);
     VERIFY_SUCCESS(err_code);
 
-    // Add CommandResponse characteristic
+    // Add Orange Indication characteristic
     err_code = orange_indication_char_add(p_orange, p_orange_init);
     VERIFY_SUCCESS(err_code);
 
-    // Add CommandResponse characteristic
+    // Add Orange Notification characteristic
     err_code = orange_notification_char_add(p_orange, p_orange_init);
     VERIFY_SUCCESS(err_code);
 
-    // Add Lock CommandTransmission characteristic
+    // Add Lock Orange Write characteristic
     err_code = command_write_char_add(p_orange, p_orange_init);
     VERIFY_SUCCESS(err_code);
 
@@ -471,8 +471,8 @@ uint32_t ble_orange_init(ble_orange_t * p_orange, const ble_orange_init_t * p_or
  
 /**
  ***************************************************************************************************
- *	@brief			Indication transmission function
- *	@details		transmission Indication
+ *	@brief			Notification transmission function
+ *	@details		transmission Notification
  *      @param[in] p_orange  Orange Service structure.
  **************************************************************************************************/
 uint32_t ble_orange_notification(ble_orange_t * p_orange, uint8_t *data, uint16_t len)
@@ -481,7 +481,7 @@ uint32_t ble_orange_notification(ble_orange_t * p_orange, uint8_t *data, uint16_
 
     memset(&params, 0, sizeof(params));
     params.type = BLE_GATT_HVX_NOTIFICATION;
-    params.handle = p_orange->command_res_handles.value_handle;
+    params.handle = p_orange->command_notification_handles.value_handle;
     params.p_data = data;
     params.p_len = &len;
 
@@ -505,106 +505,12 @@ uint32_t ble_orange_indication(ble_orange_t * p_orange, uint8_t *data, uint16_t 
 
     memset(&params, 0, sizeof(params));
     params.type = BLE_GATT_HVX_INDICATION;
-    params.handle = p_orange->command_res_handles.value_handle;
+    params.handle = p_orange->command_indication_handles.value_handle;
     params.p_data = data;
     params.p_len = &len;
 
     return sd_ble_gatts_hvx(p_orange->conn_handle, &params);
 }
-
-
-/**
- ***************************************************************************************************
- *	@brief			//
- *	@details		//
- **************************************************************************************************/ 
-void ble_indication_start(uint8_t ble_type, uint8_t ble_command)
-{
-    if(true == ble_connect_flag)
-    {
-        ble_indicate_flag = true;
-        ble_indicate_enable = true;
-    }
-}
-
-
-/**
- ***************************************************************************************************
- *	@brief			//
- *	@details		//
- **************************************************************************************************/ 
-static void ble_indication_end(void)
-{
-    indication_len = 0;
-    indication_packet_count = 0;
-    indication_packet_num = 0;
-    indication_last_packet_mod = 0;
-    
-    ble_indicate_flag = false;
-    ble_indicate_enable = false;
-    
-    ble_cmd = 0x00;
-
-    for(int i=0; i<BLE_ALL_DATA_MAX; i++)
-    {
-        indication_buf[i] = 0x00;
-    }
-}
-
-/**
- ***************************************************************************************************
- *	@brief			//
- *	@details		//
- **************************************************************************************************/ 
-static uint16_t indication_size;
-static void ble_indication_command(void)
-{
-    uint8_t split_indication_buf[mtu_max_size];
-    //uint16_t indication_size;
-
-    split_indication_buf[0] = indication_packet_num;
-    split_indication_buf[1] = indication_packet_count;
-    for(int i=2; i<mtu_max_size; i++)
-    {
-        split_indication_buf[i] = indication_buf[(mtu_max_size-2)*indication_packet_count + i - 2];
-    }
-
-
-    if((indication_packet_count+1) == indication_packet_num)
-    {
-        if(0 != indication_len%(mtu_max_size-2))
-        {
-            indication_size = indication_len%(mtu_max_size-2)+2; //((128%(200-2) + 2
-        } else
-        {
-            indication_size = mtu_max_size;
-        }
-
-    } else
-    {
-        indication_size = mtu_max_size;
-    }
-
-    indication_exe(&split_indication_buf[0], indication_size);
-}
-
-/**
- ***************************************************************************************************
- *	@brief			//
- *	@details		//
- **************************************************************************************************/ 
-void ble_indication_exe(void)
-{       
-    if(true == ble_indicate_flag)
-    {
-        if(true == ble_indicate_enable && true == ble_connect_flag)
-        {
-            ble_indication_command();
-            ble_indicate_enable = false;
-        }
-    }
-}
-
 
 /**
  ***************************************************************************************************
@@ -644,7 +550,7 @@ void peripheral_indication_test(void)
 
         for(int i=0; i<10; i++)
         {
-            send_data[i] = send_data[i] + indication_test_cyc%10;
+            send_data[i] = '0'+ indication_test_cyc%10;
         }
 
         indication_exe(&send_data[0], indication_size);
@@ -658,10 +564,21 @@ void peripheral_write_notification_test(void)
 {
     if(true == ble_connect_flag && true == write_flag)
     {
-        write_flag = false;
+        //write_flag = false;
         notification_exe(&write_buf[0], received_write_data_len);
     }
 }
 
+
+void peripheral_write_indication_test(void)
+{
+    if(true == ble_connect_flag && true == write_flag
+         && true == ble_indicate_enable)
+    {
+        write_flag = false;
+        ble_indicate_enable = false;
+        indication_exe(&write_buf[0], received_write_data_len);
+    }
+}
 
 #endif // NRF_MODULE_ENABLED(BLE_ORANGE)

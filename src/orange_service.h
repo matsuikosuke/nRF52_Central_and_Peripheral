@@ -89,7 +89,8 @@ struct ble_orange_s
 {
     uint16_t                    service_handle;      /**< Handle of Smart Lock Service (as provided by the BLE stack). */
     ble_gatts_char_handles_t    orange_read_handles;  /**< Handles related to the LockState Characteristic. */
-    ble_gatts_char_handles_t    command_res_handles; /**< Handles related to the CommandResponse Characteristic. */
+    ble_gatts_char_handles_t    command_notification_handles; /**< Handles related to the CommandResponse Characteristic. */
+    ble_gatts_char_handles_t    command_indication_handles; /**< Handles related to the CommandResponse Characteristic. */
     ble_gatts_char_handles_t    command_trans_handles;  /**< Handles related to the CommandTransmission Characteristic. */
     uint8_t                     uuid_type;           /**< UUID type for the Smart Lock Service. */
     uint16_t                    conn_handle; 
@@ -139,6 +140,7 @@ void ble_notification_exe(void);
 void peripheral_notification_test(void);
 void peripheral_indication_test(void);
 void peripheral_write_notification_test(void);
+void peripheral_write_indication_test(void);
 
 
 #ifdef __cplusplus

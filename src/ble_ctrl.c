@@ -583,7 +583,10 @@ static void advertising_stop(void)
 static void pm_evt_handler(pm_evt_t const * p_evt)
 {
     pm_handler_on_pm_evt(p_evt);
-    //pm_handler_disconnect_on_sec_failure(p_evt);
+#if defined(BUG_AND_TEMPORARY_STOP)
+#else
+    pm_handler_disconnect_on_sec_failure(p_evt);
+#endif
     pm_handler_flash_clean(p_evt);
 
     switch (p_evt->evt_id)
@@ -1091,12 +1094,6 @@ static void on_ble_central_evt(ble_evt_t const * p_ble_evt)
                         scan_buf[i] = p_adv_report->data.p_data[i];
                     }
                 }
-                //if ((p_adv_report->dlen == 30 ) && (ble_state == BLE_CONNECTED) &&
-                    //(p_adv_report->data[25] == 0x34) &&
-                    //(p_adv_report->data[26] == 0x12) &&
-                    //(p_adv_report->data[27] == 0x78) &&
-                    //(p_adv_report->data[2] == 0x1a))
-                    //ble_nus_string_send(&m_nus, p_adv_report->data, p_adv_report->dlen);
         }
         break;
 
@@ -1147,7 +1144,6 @@ static void orange_c_evt_handler(ble_orange_c_t * p_orange_c, ble_orange_c_evt_t
                     APP_ERROR_CHECK(err_code);
                 }
 #endif
-
 
                 // Orange service discovered. Enable notification.
                 err_code = ble_orange_c_orange_notification_enable(p_orange_c);
