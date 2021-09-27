@@ -43,6 +43,7 @@ extern uint8_t read_buf[10];
 
 extern uint8_t adv_buf[31];
 extern uint8_t scan_buf[31];
+extern uint8_t beacon_buf[31];
 
 extern uint8_t central_read_buf[10];
 

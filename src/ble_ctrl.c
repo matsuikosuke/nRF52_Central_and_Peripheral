@@ -1093,6 +1093,14 @@ static void on_ble_central_evt(ble_evt_t const * p_ble_evt)
                     {
                         scan_buf[i] = p_adv_report->data.p_data[i];
                     }
+                    else if(0 == p_adv_report->type.connectable 
+                        && 0 == p_adv_report->type.directed
+                        && 0 == p_adv_report->type.scannable
+                        && 0 == p_adv_report->type.extended_pdu
+                        && 0 == p_adv_report->type.scan_response)
+                    {
+                        beacon_buf[i] = p_adv_report->data.p_data[i];
+                    }
                 }
         }
         break;
