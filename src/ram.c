@@ -74,6 +74,13 @@ uint8_t sci6is_index;
 bool test_flag;
 bool i2c_on_flag = false;
 
+// DHT11
+uint8_t temperature_high;
+uint8_t temperature_low;
+uint8_t humidity_high;
+uint8_t humidity_low;
+uint8_t parity;
+
 // Device Information
 uint8_t device_id[DEVICE_ID_LENGTH];
 uint8_t softdevice_version_buf[SOFTDEVICE_VERSION_LENGTH] = SOFTDEVICE_VERSION;

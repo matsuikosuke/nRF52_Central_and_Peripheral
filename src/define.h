@@ -219,7 +219,7 @@
   LIS3DH
 ----------------------------------------------------------*/
 /* Common addresses definition for LIS3DH. */
-#define LIS3DH_ADDR       0x19
+#define LIS3DH_ADDR       0x19  // 0x32 >> 1
 
 /* Register address definition for LIS3DH. */
 #define LIS3DH_REG_STATUS_REG_AUX	0x07
@@ -266,15 +266,15 @@
 #define LIS3DH_REG_ACT_DUR              0x3F
 
 /*----------------------------------------------------------
+  SHT31
+----------------------------------------------------------*/
+/* Common addresses definition for SHT31. */
+#define SHT31_ADDR       0x45
+
+
+/*----------------------------------------------------------
   Mounting position
 ----------------------------------------------------------*/
-#define CITYBIKE_POSITION_X   0xD0
-#define CITYBIKE_POSITION_Y   0x00
-#define CITYBIKE_POSITION_Z   0x25
-#define ELCTBIKE_POSITION_X   0xD0
-#define ELCTBIKE_POSITION_Y   0x00
-#define ELCTBIKE_POSITION_Z   0x25
-
 #define ACCE_THRESHOLD_VALUE  (10)
 
 #if defined(ELCTBIKE_MODE)

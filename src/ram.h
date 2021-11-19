@@ -73,6 +73,12 @@ extern uint8_t sci6is_index;
 extern bool test_flag;
 extern bool i2c_on_flag;
 
+// DHT11
+extern uint8_t temperature_high;
+extern uint8_t temperature_low;
+extern uint8_t humidity_high;
+extern uint8_t humidity_low;
+extern uint8_t parity;
 
 // initialize RAM variables
 extern void ram_init(void);

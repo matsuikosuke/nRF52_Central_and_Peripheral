@@ -136,6 +136,10 @@
           <file file_name="../../../src/w25q80dv_ctrl.h" />
           <file file_name="../../../src/buzzer_ctrl.c" />
           <file file_name="../../../src/buzzer_ctrl.h" />
+          <file file_name="../../../src/dht11_ctrl.c" />
+          <file file_name="../../../src/dht11_ctrl.h" />
+          <file file_name="../../../src/sht31_ctrl.c" />
+          <file file_name="../../../src/sht31_ctrl.h" />
         </folder>
         <folder Name="common">
           <file file_name="../../../src/ram.c" />

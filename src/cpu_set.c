@@ -91,6 +91,13 @@ static void gpio_init(void)
     // SPI CS
     nrf_gpio_cfg_output(F_NSS_PIN);
     nrf_gpio_pin_set(F_NSS_PIN); // default:High
+    
+    //-----------------------------------------------
+    // DHT11 BUS
+    nrf_gpio_cfg_output(DHT11_BUS_PIN);
+    nrf_gpio_pin_set(DHT11_BUS_PIN); // default:High
+
+    //nrf_gpio_cfg_input(DHT11_BUS_PIN, NRF_GPIO_PIN_PULLUP);
 }
 
 /**

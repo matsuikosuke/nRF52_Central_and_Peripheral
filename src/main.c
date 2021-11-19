@@ -38,9 +38,11 @@ int main(void)
 //        peripheral_indication_test();
         central_read_test();
 
+        DHT11_certainty_get_data();
+        nrf_delay_ms(1000);
+
         WDT_RESTART();
         idle_state_handle();
-
     }
 }
 

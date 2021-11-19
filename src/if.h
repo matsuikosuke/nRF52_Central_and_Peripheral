@@ -13,8 +13,17 @@
 
 // Accelerometer
 #define VIB_INT_PIN (27)
-#define VIB_SCL_PIN (28)
-#define VIB_SDA_PIN (29)
+
+// I2C Common
+#define SCL_PIN (12) //P0.12
+#define SDA_PIN (11) //P0.11
+
+// DHT11
+#define DHT11_BUS_PIN (41) //P1.09 //32+09=41
+
+// SHT31
+#define SHT31_SCL_PIN (12) //P0.12
+#define SHT31_SDA_PIN (11) //P0.11
 
 // AD
 #define LIBAT_TEST_PIN NRF_SAADC_INPUT_AIN0        // AN0

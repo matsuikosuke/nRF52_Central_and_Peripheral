@@ -43,6 +43,8 @@
 #include "timer.h"
 #include "uart_ctrl.h"
 #include "w25q80dv_ctrl.h"
+#include "dht11_ctrl.h"
+#include "sht31_ctrl.h"
 
 // dfu
 #include "ble_dfu.h"
